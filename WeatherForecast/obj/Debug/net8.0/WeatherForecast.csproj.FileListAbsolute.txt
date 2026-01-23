@@ -33,3 +33,4 @@ C:\Users\CsKrisz\source\repos\RoleBasedAuthentication\WeatherForecast\obj\Debug\
 C:\Users\CsKrisz\source\repos\RoleBasedAuthentication\WeatherForecast\obj\Debug\net8.0\WeatherForecast.pdb
 C:\Users\CsKrisz\source\repos\RoleBasedAuthentication\WeatherForecast\obj\Debug\net8.0\WeatherForecast.genruntimeconfig.cache
 C:\Users\CsKrisz\source\repos\RoleBasedAuthentication\WeatherForecast\obj\Debug\net8.0\ref\WeatherForecast.dll
+C:\Users\CsKrisz\source\repos\RoleBasedAuthentication\WeatherForecast\obj\Debug\net8.0\WeatherForecast.sourcelink.json

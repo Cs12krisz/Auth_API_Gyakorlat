@@ -1,4 +1,6 @@
 
+using Authentication.Datas;
+
 namespace Authentication
 {
     public class Program
@@ -7,6 +9,7 @@ namespace Authentication
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Services.AddDbContext<AppDbContext>();
             // Add services to the container.
 
             builder.Services.AddControllers();
