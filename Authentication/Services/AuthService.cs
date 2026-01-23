@@ -10,15 +10,48 @@ namespace Authentication.Services
     {
         private readonly AppDbContext _context;
         private readonly UserManager<ApplicationUser> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
         public ResponseDto responseDto = new();
 
-        public AuthService(AppDbContext context, UserManager<ApplicationUser> userManager)
+        public AuthService(AppDbContext context, UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
         {
             _context = context;
             _userManager = userManager;
+            _roleManager = roleManager;
         }
 
-       
+        public async Task<object> AssignRole(string userName, string roleName)
+        {
+            try
+            {
+                var user = await _context.ApplicationUsers.FirstOrDefaultAsync(user => user.NormalizedUserName == userName.ToUpper());
+
+                if (user != null) 
+                {
+                    if (!_roleManager.RoleExistsAsync(roleName).GetAwaiter().GetResult())
+                    {
+                        _roleManager.CreateAsync(new IdentityRole(roleName)).GetAwaiter().GetResult();
+                    }
+
+
+                    await _userManager.AddToRoleAsync(user, roleName);
+                    responseDto.Message = "Sikeres hozzárendelés";
+                    responseDto.Result = user;
+                    return responseDto;
+                }
+
+                responseDto.Message = "Sikertelen hozzárendelés";
+                return responseDto;
+
+            }
+            catch (Exception ex)
+            {
+                responseDto.Message = ex.Message;
+                responseDto.Result = ex.HResult;
+                return responseDto;
+            }
+        }
+
         public async Task<object> Register(RegisterRequestDto registerRequestDto)
         {
 			try

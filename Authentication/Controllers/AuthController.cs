@@ -28,5 +28,18 @@ namespace Authentication.Controllers
 
             return BadRequest(user);
         }
+
+        [HttpPost("AssignRole")]
+        public async Task<ActionResult> AssignRole(string userName, string roleName)
+        {
+            var response = await _auth.AssignRole(userName, roleName);
+            var result = response as ResponseDto;
+            if (result.Result != null)
+            {
+                return StatusCode(201, result);
+            }
+
+            return BadRequest(result);
+        }
     }
 }

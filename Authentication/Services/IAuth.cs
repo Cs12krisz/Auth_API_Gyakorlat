@@ -5,5 +5,6 @@ namespace Authentication.Services
     public interface IAuth
     {
         Task<object> Register(RegisterRequestDto registerRequestDto);
+        Task<object> AssignRole(string userName, string RoleName);
     }
 }
