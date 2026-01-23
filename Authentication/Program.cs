@@ -1,5 +1,8 @@
 
 using Authentication.Datas;
+using Authentication.Models;
+using Authentication.Services;
+using Microsoft.AspNetCore.Identity;
 
 namespace Authentication
 {
@@ -10,6 +13,12 @@ namespace Authentication
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddDbContext<AppDbContext>();
+            builder.Services.AddScoped<IAuth, AuthService>();
+
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+
+
+
             // Add services to the container.
 
             builder.Services.AddControllers();
