@@ -1,6 +1,7 @@
 ﻿using Authentication.Datas;
 using Authentication.Models;
 using Authentication.Models.Dtos;
+using Authentication.Services.AuthInterfaces;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,13 +12,16 @@ namespace Authentication.Services
         private readonly AppDbContext _context;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly ITokenGenerator _tokenGenerator;
         public ResponseDto responseDto = new();
 
-        public AuthService(AppDbContext context, UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
+        public AuthService(AppDbContext context, UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager, ITokenGenerator tokenGenerator, ResponseDto responseDto)
         {
             _context = context;
             _userManager = userManager;
             _roleManager = roleManager;
+            _tokenGenerator = tokenGenerator;
+            this.responseDto = responseDto;
         }
 
         public async Task<object> AssignRole(string userName, string roleName)
@@ -54,7 +58,32 @@ namespace Authentication.Services
 
         public async Task<object> Login(LoginRequestDto loginRequestDto)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var user = await _context.ApplicationUsers.FirstOrDefaultAsync(u => u.NormalizedUserName == loginRequestDto.UserName.ToUpper());
+
+                bool isValid = await _userManager.CheckPasswordAsync(user, loginRequestDto.Password);
+
+                if (isValid) 
+                {
+                    var roles = await _userManager.GetRolesAsync(user);
+                    var jwtToken = _tokenGenerator.GenerateToken(user, roles);
+
+                    responseDto.Message = "Sikeres belépés";
+                    responseDto.Result = jwtToken;
+                    return responseDto;
+                }
+
+                responseDto.Message = "Sikertelen belépés";
+                return responseDto;
+
+            }
+            catch (Exception ex)
+            {
+                responseDto.Message = ex.Message;
+                responseDto.Result = ex.HResult;
+                return responseDto;
+            }
         }
 
         public async Task<object> Register(RegisterRequestDto registerRequestDto)

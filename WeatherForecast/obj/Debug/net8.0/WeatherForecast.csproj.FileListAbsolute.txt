@@ -70,3 +70,11 @@ C:\Users\CsKrisz\Desktop\Auth_API_Gyakorlat\WeatherForecast\obj\Debug\net8.0\ref
 C:\Users\CsKrisz\Desktop\Auth_API_Gyakorlat\WeatherForecast\obj\Debug\net8.0\WeatherForecast.pdb
 C:\Users\CsKrisz\Desktop\Auth_API_Gyakorlat\WeatherForecast\obj\Debug\net8.0\WeatherForecast.genruntimeconfig.cache
 C:\Users\CsKrisz\Desktop\Auth_API_Gyakorlat\WeatherForecast\obj\Debug\net8.0\ref\WeatherForecast.dll
+C:\Users\CsKrisz\Desktop\Auth_API_Gyakorlat\WeatherForecast\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\CsKrisz\Desktop\Auth_API_Gyakorlat\WeatherForecast\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\CsKrisz\Desktop\Auth_API_Gyakorlat\WeatherForecast\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\CsKrisz\Desktop\Auth_API_Gyakorlat\WeatherForecast\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\CsKrisz\Desktop\Auth_API_Gyakorlat\WeatherForecast\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\CsKrisz\Desktop\Auth_API_Gyakorlat\WeatherForecast\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\CsKrisz\Desktop\Auth_API_Gyakorlat\WeatherForecast\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\CsKrisz\Desktop\Auth_API_Gyakorlat\WeatherForecast\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

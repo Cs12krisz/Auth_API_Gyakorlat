@@ -1,7 +1,10 @@
 
 using Authentication.Datas;
 using Authentication.Models;
+using Authentication.Models.Dtos;
 using Authentication.Services;
+using Authentication.Services.AuthInterfaces;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 
 namespace Authentication
@@ -14,7 +17,9 @@ namespace Authentication
 
             builder.Services.AddDbContext<AppDbContext>();
             builder.Services.AddScoped<IAuth, AuthService>();
-
+            builder.Services.AddScoped<ResponseDto>();
+            builder.Services.AddScoped<ITokenGenerator, TokenGenerator>();
+            builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection("AuthSettings:JwtOptions"));
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
 
 

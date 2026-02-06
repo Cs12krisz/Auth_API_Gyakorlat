@@ -1,5 +1,5 @@
 ﻿using Authentication.Models.Dtos;
-using Authentication.Services;
+using Authentication.Services.AuthInterfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -40,6 +40,19 @@ namespace Authentication.Controllers
             }
 
             return BadRequest(result);
+        }
+
+        [HttpPost("Login")]
+        public async Task<ActionResult> Login(LoginRequestDto loginRequestDto)
+        {
+            var user = await _auth.Login(loginRequestDto);
+
+            if ((user as ResponseDto).Result != null)
+            {
+                return StatusCode(201, user);
+            }
+
+            return BadRequest(user);
         }
     }
 }
