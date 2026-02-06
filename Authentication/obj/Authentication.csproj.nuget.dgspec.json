@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\CsKrisz\\source\\repos\\RoleBasedAuthentication\\Authentication\\Authentication.csproj": {}
+    "C:\\Users\\CsKrisz\\Desktop\\Auth_API_Gyakorlat\\Authentication\\Authentication.csproj": {}
   },
   "projects": {
-    "C:\\Users\\CsKrisz\\source\\repos\\RoleBasedAuthentication\\Authentication\\Authentication.csproj": {
+    "C:\\Users\\CsKrisz\\Desktop\\Auth_API_Gyakorlat\\Authentication\\Authentication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\CsKrisz\\source\\repos\\RoleBasedAuthentication\\Authentication\\Authentication.csproj",
+        "projectUniqueName": "C:\\Users\\CsKrisz\\Desktop\\Auth_API_Gyakorlat\\Authentication\\Authentication.csproj",
         "projectName": "Authentication",
-        "projectPath": "C:\\Users\\CsKrisz\\source\\repos\\RoleBasedAuthentication\\Authentication\\Authentication.csproj",
+        "projectPath": "C:\\Users\\CsKrisz\\Desktop\\Auth_API_Gyakorlat\\Authentication\\Authentication.csproj",
         "packagesPath": "C:\\Users\\CsKrisz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\CsKrisz\\source\\repos\\RoleBasedAuthentication\\Authentication\\obj\\",
+        "outputPath": "C:\\Users\\CsKrisz\\Desktop\\Auth_API_Gyakorlat\\Authentication\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

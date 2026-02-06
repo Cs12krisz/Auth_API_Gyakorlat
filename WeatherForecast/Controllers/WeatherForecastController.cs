@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authorization.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WeatherForecast.Controllers
@@ -18,6 +20,7 @@ namespace WeatherForecast.Controllers
             _logger = logger;
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {

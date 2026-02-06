@@ -8,7 +8,7 @@ namespace Authentication.Datas
     {
         public AppDbContext(DbContextOptions options) : base(options)
         {
-
+            Database.EnsureCreated();
         }
 
         public virtual DbSet<ApplicationUser> ApplicationUsers { get; set; }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\CsKrisz\\source\\repos\\RoleBasedAuthentication\\WeatherForecast\\WeatherForecast.csproj": {}
+    "C:\\Users\\CsKrisz\\Desktop\\Auth_API_Gyakorlat\\WeatherForecast\\WeatherForecast.csproj": {}
   },
   "projects": {
-    "C:\\Users\\CsKrisz\\source\\repos\\RoleBasedAuthentication\\WeatherForecast\\WeatherForecast.csproj": {
+    "C:\\Users\\CsKrisz\\Desktop\\Auth_API_Gyakorlat\\WeatherForecast\\WeatherForecast.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\CsKrisz\\source\\repos\\RoleBasedAuthentication\\WeatherForecast\\WeatherForecast.csproj",
+        "projectUniqueName": "C:\\Users\\CsKrisz\\Desktop\\Auth_API_Gyakorlat\\WeatherForecast\\WeatherForecast.csproj",
         "projectName": "WeatherForecast",
-        "projectPath": "C:\\Users\\CsKrisz\\source\\repos\\RoleBasedAuthentication\\WeatherForecast\\WeatherForecast.csproj",
+        "projectPath": "C:\\Users\\CsKrisz\\Desktop\\Auth_API_Gyakorlat\\WeatherForecast\\WeatherForecast.csproj",
         "packagesPath": "C:\\Users\\CsKrisz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\CsKrisz\\source\\repos\\RoleBasedAuthentication\\WeatherForecast\\obj\\",
+        "outputPath": "C:\\Users\\CsKrisz\\Desktop\\Auth_API_Gyakorlat\\WeatherForecast\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

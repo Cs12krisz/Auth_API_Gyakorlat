@@ -52,6 +52,11 @@ namespace Authentication.Services
             }
         }
 
+        public async Task<object> Login(LoginRequestDto loginRequestDto)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<object> Register(RegisterRequestDto registerRequestDto)
         {
 			try

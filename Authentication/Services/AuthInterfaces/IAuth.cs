@@ -6,5 +6,8 @@ namespace Authentication.Services
     {
         Task<object> Register(RegisterRequestDto registerRequestDto);
         Task<object> AssignRole(string userName, string RoleName);
+        Task<object> Login(LoginRequestDto loginRequestDto);
+
+
     }
 }

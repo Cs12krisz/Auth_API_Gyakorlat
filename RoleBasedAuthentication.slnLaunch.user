@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "WeatherForecast\\WeatherForecast.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Authentication\\Authentication.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "20ljFpb/sek=",
+  "dgSpecHash": "rHH75YP010Q=",
   "success": true,
-  "projectFilePath": "C:\\Users\\CsKrisz\\source\\repos\\RoleBasedAuthentication\\Authentication\\Authentication.csproj",
+  "projectFilePath": "C:\\Users\\CsKrisz\\Desktop\\Auth_API_Gyakorlat\\Authentication\\Authentication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\CsKrisz\\.nuget\\packages\\bouncycastle.cryptography\\2.6.2\\bouncycastle.cryptography.2.6.2.nupkg.sha512",
     "C:\\Users\\CsKrisz\\.nuget\\packages\\google.protobuf\\3.32.0\\google.protobuf.3.32.0.nupkg.sha512",
